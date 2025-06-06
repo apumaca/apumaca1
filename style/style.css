@@ -1,0 +1,451 @@
+/* ===== VARIABLES CSS ===== */
+:root {
+    --primary-color: #578090;
+    --secondary-color: #578090;
+    --dark-color2: #FFFFFF;
+    --dark-color: #578090;
+    --light-color: #578090;
+    --gray-light: #578090;
+    --gray-medium: #578090;
+    --gray-dark: #578090;
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* ===== NAVBAR ===== */
+.navbar-custom {
+    background: rgb(199, 231, 244);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(150, 15, 15, 0.938);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #306294;
+}
+
+.navbar {
+    height: 60px;
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-color) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff !important;
+    background-color: #2071A6;
+    border-radius: 5px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #578090, #578090);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+	 padding-top: 120px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+   
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #e9ecef;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.2s both;
+    font-weight: 500;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #dee2e6;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.4s both;
+    line-height: 1.7;
+}
+
+/* ===== CARRUSEL ===== */
+.static-image img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #57808F;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+   ;
+    border-radius: 2px;
+}
+
+/* ===== SOBRE MÍ ===== */
+#about {
+    background-color: #ffffff;
+    padding: 0; /* Elimina cualquier espacio adicional */
+    margin: 0; /* Asegura que no haya márgenes externos */
+}
+
+/* Imagen fija */
+ .static-image img,
+    .fixed-image {
+      pointer-events: auto !important;
+      transition: none !important;
+      transform: none !important;
+    }
+/* Opcional: elimina cualquier interacción con la imagen */
+.fixed-image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0; /* Cubre todo el contenedor */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+.education-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+    border: 1px solid #e9ecef;
+}
+
+.education-card.bg-yellow {
+    background: #B57D12; /* Color amarillo claro */
+    border-left-color: #B57D12; /* Amarillo */
+}
+
+.education-card.bg-blue {
+    background: #2071A6; /* Color azul claro */
+    border-left-color: #2071A6; /* Azul */
+}
+
+.education-card.bg-red {
+    background: #681317; /* Color rojo claro */
+    border-left-color: #681317; /* Rojo */
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-left-color: var(--gray-dark);
+}
+
+.education-card h4 {
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+.education-card h5 {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+ .education-card p {
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    .education-card .text-muted {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+/* ===== HABILIDADES MEJORADAS ===== */
+
+/* Habilidades principales */
+.skill-bar-item {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    text-align: center;
+}
+
+.skill-bar-icon {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.skill-percentage {
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-progress-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    height: 10px;
+    margin: 10px 0;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #007bff;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Aplica la animación al cargar */
+.skill-progress-bar[data-percentage="80"] {
+    width: 80%;
+}
+.skill-progress-bar[data-percentage="50"] {
+    width: 50%;
+}
+.skill-progress-bar[data-percentage="60"] {
+    width: 60%;
+}
+
+.skills-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.divider-icon {
+    padding: 0 15px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Galería en pantalla completa */
+.project-gallery-fullscreen {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.project-gallery-fullscreen .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.project-full-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Etiqueta sobre imagen */
+.image-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.6);
+    ´<
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+/* Botones del carrusel */
+.project-control {
+    width: 5%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-full-img {
+        height: 60vh;
+    }
+
+    .image-overlay {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    border-top: 3px solid var(--gray-dark);
+}
+
+.footer h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    color: #dee2e6;
+    margin-bottom: 0;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #dee2e6;
+    transform: translateY(-3px);
+}
+
+.footer hr {
+    border-color: #495057;
+    margin: 2rem 0;
+}
+
+/* ===== MEJORAS DE LEGIBILIDAD ===== */
+.text-contrast {
+    color: var(--dark-color) !important;
+    font-weight: 500;
+}
+
+.bg-pattern {
+    background-image: 
+        linear-gradient(45deg, #f8f9fa 25%, transparent 25%), 
+        linear-gradient(-45deg, #f8f9fa 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #f8f9fa 75%), 
+        linear-gradient(-45deg, transparent 75%, #f8f9fa 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Mejorar contraste en elementos específicos */
+.navbar-nav .nav-link {
+    font-weight: 600 !important;
+}
+
+.hero-section .btn-custom {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Asegurar legibilidad en todos los textos */
+body {
+    color: var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+p {
+    color: var(--dark-color);
+    line-height: 1.7;
+}
+
+.education-card P {
+    color: var(--dark-color2);
+    line-height: 1.7;
+}
+
+.hero-content A {
+    color: var(--dark-color2);
+    line-height: 1.7;
+}
